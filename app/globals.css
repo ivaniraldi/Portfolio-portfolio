@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 46 55% 52%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 46 55% 52%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 46 55% 52%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+  }
+  p,
+  a,
+  button,
+  input,
+  textarea,
+  span {
+    font-family: var(--font-inter);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .heading-xl {
+    @apply font-bold text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  .heading-lg {
+    @apply font-bold text-3xl md:text-4xl leading-tight;
+  }
+
+  .heading-md {
+    @apply font-bold text-2xl md:text-3xl leading-tight;
+  }
+
+  .gold-text {
+    @apply text-primary;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-primary text-primary font-medium rounded-md transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .card {
+    @apply bg-card p-6 rounded-lg border border-muted transition-all duration-300 hover:border-primary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
