@@ -8,7 +8,7 @@ import About from "@/components/About"
 import Services from "@/components/Services"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
-
+import AlertComponent from "@/components/AlertComponent"
 export default function Home() {
   // Função para navegação suave
   useEffect(() => {
@@ -40,6 +40,7 @@ export default function Home() {
 
   return (
     <main>
+      <AlertComponent />
       <Header />
       <Hero />
       <Gallery />
